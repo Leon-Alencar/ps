@@ -3,27 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PS-Tablet</title>
+    <title>Pedido</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Leon</h1>
+    <!--Vou colocar a img e o h1 ao lado esquerdo com a
+    opção de clicar em cima e retomar para o início, e
+    quando rolar a tela para baixo ele vai diminuir-->
+
+    <header class="titulo-base" id="titulo-variavel">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSPBFCYcbCkP0-PQnt-SVGH1tiQPK9dUNCaKWMFkPrqA&s=10" alt="logo-risot-do-sabor" class="logo-top" id="top-logo">
+        <h1 class="titulo-top" id="variavel-titulo">Sabor do Sol</h1>
+
+        <!--O nav vou colocar sem fundo, no canto superior direito
+        dentro do header-->
+
+        <div class="navegar" id="navebar-a">
+            <a href="index.html">🏠</a>
+
+            <!-- No item carrinho, quero que apareça a quantidade
+             de intens selecionados, e dentro do carrinho a soma e o campo
+             de anotaco ções -->
+
+            <a href="#" id="compre">🛒</a>
+            <a href="https://wa.me/5534984465569">📞</a>
+        </div>
     </header>
-    <nav>
-        <a href="https://web.whatsapp.com">GitHub</a>
-    </nav>
-    <main>
-        <h2>Hoje estou testando programar com o tablet</h2>
-        <fieldset>
-            <legend>Form no tablet</legend>
-            <form>
-                <label>Digite</label>
-                <input type="texto" placeholder="digite aqui" required>
-                <button>clique aqui</button>
-            </form>
-        </fieldset>
+
+    <!--No main, vou fazer sessões para o cardápio e disponibilizar até 
+    5 opcoeções de produtos, com o botao de escolha -->
+
+    <main class="card-01">
+
+        <h1 class="sessao1">Cardápio</h1>
+
+        <!-- Farei, sessões, separadas por ordem de refeição, usarei a mesma class para 
+         estilizar todos os cards e imagens juntas, irei ajustar os ids -->
+
+        <section class="caixa">
+            <h2 class="entrada">Entrada</h2>
+            <div class="box">
+                <h3 class="tipo">Torrada com pater de azeitonas e berinjela</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkBM06VPLBQ3pKnuzVupK636vO2Y-L4nUKamNYwe6XUw&s=10" alt="torrada-com-pater-de-azeitona-e-berinjela" class="ftcomda">
+                <p class="descri">Deliciosa torrada crocante com patê artesanal.</p>
+                <span class="valor">R$ 50,00</span>
+                <button id="torrada-comp" class="bnt-esc">Adicionar ao carrinho</button>
+            </div>
+
+            <div class="box">
+                <h3 class="tipo">Camarão Empanado</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_nMMksk19rLsFt6-xhczYaaEsFzxLKeXZSCvsciD1E7GFj_DAcDdvZfnp&s=10" alt="Camarao-empanado" class="ftcomda">
+                <p class="descri">Camarão empanado com trigo, ovo  e queijo, acompanhado com molho de abobora</p>
+                <span class="valor">R$ 98,00</span>
+                <button id="camaempa" class="bnt-esc">Adicionar ao carrinho</button>
+            </div>
+
+            <div class="box">
+                <h3 class="tipo">Porçáo de Tilápia</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBmi4LLFvMsGkT0fwjLsD8w78gv8PMkSudI8aRPkbEkw&s=10" alt="Porção-de-Tilapia" class="ftcomda">
+                <p class="descri">Porção de 700g de filé de tilápia empanado com fubar.</p>
+                <span class="valor">R$ 150,00</span>
+                <button id="peixeempa" class="bnt-esc">Adicionar ao carrinho</button>
+            </div>
+        </section>
+
+        <section class="caixa">
+            <h2 class="entrada">Salada</h2>
+            <div class="box">
+                <h3 class="tipo">Salada Caesa</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGvf2CBnvlu6g236GYNwXORAVYJBH8qu62zvlHbvQbHg&s=10" alt="salada-caesa" class="ftcomda">
+                <p class="descri">Deliciosa torrada crocante com folhas e tomates cereja frescos.</p>
+                <span class="valor">R$ 25,00</span>
+                <button id="Caesa" class="bnt-esc">Adicionar ao carrinho</button>
+            </div>
+
+            <div class="box">
+                <h3 class="tipo">Salada Cítrica</h3>
+                <img src="https://i0.wp.com/pat.feldman.com.br/wp-content/uploads/2012/03/Screen-Shot-2012-03-12-at-8.55.03-PM.png?resize=300%2C296&ssl=1" alt="Salada-Citrica" class="ftcomda">
+                <p class="descri">Deliciosa mistura de ortaliças e citricos.</p>
+                <span class="valor">R$ 35,00</span>
+                <button id="citrico" class="bnt-esc">Adicionar ao carrinho</button>
+            </div>
+
+            <div class="box">
+                <h3 class="tipo">salada primavera</h3>
+                <img src="https://blog.biglar.com.br/wp-content/uploads/2023/11/salad-from-tomatoes-cucumber-red-onions-lettuce-leaves-healthy-summer-vitamin-menu-vegan-vegetable-food-vegetarian-dinner-table.jpeg" alt="Salada-primavera" class="ftcomda">
+                <p class="descri">O clássico com muito sabor</p>
+                <span class="valor">R$ 35,00</span>
+                <button id="primavera" class="bnt-esc">Adicionar ao carrinho</button>
+            </div>
+        </section>
+
+         <section class="caixa">
+            <h2 class="entrada">Prato Principal</h2>
+            <div class="box">
+                <h3 class="tipo">Lombo Reecheado com crosta de baicon</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1IMXcBp77_-ZFhqjGa5a2GD6R9HM96umLAk6HeAqLBw&s=10" alt="Lomboo-recheado-com-crosta-de-baicon" class="ftcomda">
+                <p class="descri">700g de lombo recheado com queijo coalho e banana da terra caramelizada</p>
+                <span class="valor">R$ 175,00</span>
+                <button id="lombo" class="bnt-esc">Adicionar ao carrinho</button>
+            </div>
+
+            <div class="box">
+                <h3 class="tipo">Risoto de Camarão</h3>
+                <img src="https://static.itdg.com.br/images/640-400/50d611c5a317e666dc8f9899efaa693b/shutterstock-2018302928-1-1-.jpg" alt="Risoto-de-camarao" class="ftcomda">
+                <p class="descri">300g de risoto de camarão cremoso.</p>
+                <span class="valor">R$ 190,00</span>
+                <button id="risoto" class="bnt-esc">Adicionar ao carrinho</button>
+            </div>
+
+            <div class="box">
+                <h3 class="tipo">Sarapatel de cordeiro</h3>
+                <img src="https://i.ytimg.com/vi/FrIJcWzGsvY/maxresdefault.jpg" alt="Sarapatel-de-cordeiro" class="ftcomda">
+                <p class="descri">Miudos de cordeirro, refogado comervas e eespeciarias.</p>
+                <span class="valor">R$ 150,00</span>
+                <button id="cordeiro" class="bnt-esc">Adicionar ao carrinho</button>
+            </div>
+        </section>
+
+        <section class="caixa">
+            <h2 class="entrada">Sobremesa</h2>
+            <div class="box">
+                <h3 class="tipo">Bolo Pudim de café com chocolate</h3>
+                <img src="https://www.oetker.com.br/assets/recipes/assets/448ca0c7941945199bd2136f3909b09c/1272x764/bolo-pudim-de-chocolate.jpg" alt="Bolo-Pudim-de-Café" class="ftcomda">
+                <p class="descri">Doce e macio com um sabor inrresistivel.</p>
+                <span class="valor">R$ 18,45</span>
+                <button id="Bolo" class="bnt-esc">Adicionar ao carrinho</button>
+            </div>
+
+            <div class="box">
+                <h3 class="tipo">Bolo podre</h3>
+                <img src="https://cdn0.tudoreceitas.com/pt/posts/1/9/3/bolo_podre_de_tapioca_5391_paso_2_600.jpg" alt="Bolo-Podre" class="ftcomda">
+                <p class="descri">Bolo fito com tapioca, leite condesado e baunilha, delado e doce.</p>
+                <span class="valor">R$ 14,00</span>
+                <button id="torrada-comp" class="bnt-esc">Adicionar ao carrinho</button>
+            </div>
+
+            <div class="box">
+                <h3 class="tipo">Romeu e Julieta</h3>
+                <img src="https://blog.festval.com/wp-content/uploads/2024/07/Mousse-Romeu-e-Julieta_banner.jpg" alt="romeu-julieta" class="ftcomda">
+                <p class="descri">Creme de queijo com goiabada.</p>
+                <span class="valor">R$ 12,00</span>
+                <button id="rj" class="bnt-esc">Adicionar ao carrinho</button>
+            </div>
+        </section>
+
+        <section class="caixa">
+            <h2 class="entrada">Bebidas</h2>
+            <div class="box">
+                <h3 class="tipo">Chá mate gelado com limão</h3>
+                <img src="https://kanfa.com.br/wp-content/uploads/2021/04/shutterstock_420898555-1.jpg" alt="cha-mate-gelado-com-limao" class="ftcomda">
+                <p class="descri">Gelado e refrescante</p>
+                <span class="valor">R$ 18,00</span>
+                <button id="cha" class="bnt-esc">Adicionar ao carrinho</button>
+            </div>
+
+            <div class="box">
+                <h3 class="tipo">Coquetel de abacaxi com pimenta</h3>
+                <img src="https://static.vecteezy.com/ti/fotos-gratis/p1/72777742-vibrante-picante-abacaxi-margarita-coquetel-enfeitado-com-pimenta-e-abacaxi-fatia-em-uma-texturizado-arenoso-superficie-foto.jpg" alt="coquetel-de-abacai-com-pimenta" class="ftcomda">
+                <p class="descri">doce, refrescante e picante.</p>
+                <span class="valor">R$ 22,00</span>
+                <button id="coqutel" class="bnt-esc">Adicionar ao carrinho</button>
+            </div>
+
+            <div class="box">
+                <h3 class="tipo">Cerveja de banana com canela</h3>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9wq9jVJUWXbIhWV-MDNJXm9SsF9AdVMqnsdw1KcI9dChuTuAsRKIPoNW_D-wqQlrE6xiXXe1ytIfl3dSDyN3XExka0vs3jHhMCEHvqUQhV-S8YVyWFKYmJJPdD0FBao_pgfSGV6DUTsvj/s1600/IMG_1360l+(2).jpg" alt="Cerveja-de-banana-com-canela" class="ftcomda">
+                <p class="descri">Sabor malte com a dolsura da banana caramelizada.</p>
+                <span class="valor">R$ 28,90</span>
+                <button id="cerveja" class="bnt-esc">Adicionar ao carrinho</button>
+            </div>
+        </section> 
     </main>
-    <footer></footer>
+    <footer>
+        <!--Logo e nome da empresa a esquerda-->
+        <div class="esquerdo">
+            <img src="" class="imgdow" id="logodow" alt="logo-risot-do-sabor">
+            <h3 class="rodtexto">Sabor do Sol</h3>
+        </div>
+
+        <!--Principais links no cetro-->
+        <section class="textrodape">
+            <a href="https://www.amazon.com/gp/help/customer/display.html?ie=UTF8&nodeId=TnACMrGVghHocjL8KB&ref_=footer_consumer_health_data_privacy">Política de privacidade 🔏 </a>
+            <a href="https://mg.senac.br/web/guest/quem-somos">Sobre Nós </a>
+            <a href="https://www.amazon.jobs/en/">Trabalhe aqui</a>
+            <a href="https://wa.me/5534984465569">Contato📞</a>
+        </section>
+
+        <!--Link para redes sociais e contato lado direito-->
+
+        <div class="direito">
+            <a href="https://www.instagram.com/senacminas/">
+                <img src="https://img.icons8.com/?size=100&id=hFoVFpm6gl9A&format=png&color=000000" alt="Instagram" class="ft-foter">
+            </a>
+            <a href="https://wa.me/5534984465569">
+                <img src="https://img.icons8.com/?size=100&id=108636&format=png&color=000000" alt="whatsapp" class="ft-foter">
+            </a>
+        </div>
+    </footer>
+
+    <script src="sript.js"></script>
 </body>
 </html>

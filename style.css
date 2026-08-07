@@ -15,4 +15,8 @@ body
 header
 {
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSPBFCYcbCkP0-PQnt-SVGH1tiQPK9dUNCaKWMFkPrqA&s=10%22);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
 }

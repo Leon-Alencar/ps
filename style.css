@@ -8,6 +8,11 @@ font-family: Arial, Helvetica, sans-serif;
 
 body
 {
-    background-color: #e0f2fe;
-    color: brown;
+    background-color: #FDF0D5;
+    color: black;
+}
+
+header
+{
+    background-image: url(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSPBFCYcbCkP0-PQnt-SVGH1tiQPK9dUNCaKWMFkPrqA&s=10%22");
 }

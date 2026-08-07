@@ -10,6 +10,9 @@ body
 {
     background-color: #FDF0D5;
     color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header
@@ -20,4 +23,7 @@ header
     background-repeat: no-repeat;
     height: 350px;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: ;
 }

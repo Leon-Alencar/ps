@@ -1,13 +1,11 @@
-*
-{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: Arial, Helvetica, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-body
-{
+body {
     background-color: #FDF0D5;
     color: black;
     display: flex;
@@ -15,9 +13,8 @@ body
     min-height: 100vh;
 }
 
-header
-{
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSPBFCYcbCkP0-PQnt-SVGH1tiQPK9dUNCaKWMFkPrqA&s=10%22);
+header {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSPBFCYcbCkP0-PQnt-SVGH1tiQPK9dUNCaKWMFkPrqA&s=10');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -32,26 +29,24 @@ header
     transition: height 0.3s ease-in-out;
 }
 
-header.shink
-{
+/* Estado reduzido do header ao rolar a página */
+header.shrink {
     height: 90px;
 }
 
-.titulo-base
-{
-    display:flex;
+.titulo-base {
+    display: flex;
     align-items: center;
     gap: 20px;
     cursor: pointer;
 }
 
-.logo-top
-{
+.logo-top {
     width: 70px;
     height: 70px;
     border-radius: 50%;
     object-fit: cover;
-    transition: widt 0.3s ease, height 0.3s ease;
+    transition: width 0.3s ease, height 0.3s ease;
 }
 
 header.shrink .logo-top {
@@ -70,7 +65,7 @@ header.shrink .titulo-top {
     font-size: 1.3rem;
 }
 
-/* MENU NO CANTO SUPERIOR DIREITO */
+/* MENU FIXO NO CANTO SUPERIOR DIREITO */
 .navegar {
     position: absolute;
     top: 20px;
@@ -78,6 +73,13 @@ header.shrink .titulo-top {
     display: flex;
     gap: 20px;
     background: transparent;
+    z-index: 1001;
+    transition: top 0.3s ease;
+}
+
+/* Ajusta a posição do menu se quiser que ele suba um pouco ao encolher */
+header.shrink .navegar {
+    top: 25px;
 }
 
 .navegar a {
@@ -122,7 +124,6 @@ main {
     color: #d4a373;
 }
 
-/* GRADE DE PRODUTOS RESPONSIVA */
 .box {
     display: inline-block;
     vertical-align: top;
@@ -225,7 +226,6 @@ footer {
     height: 30px;
 }
 
-/* RESPONSIVIDADE PARA CELULARES */
 @media (max-width: 768px) {
     .box {
         width: 100%;
@@ -240,11 +240,6 @@ footer {
         right: 15px;
         top: 15px;
         gap: 10px;
-    }
-
-    .navegar a {
-        font-size: 1.2rem;
-        padding: 6px 8px;
     }
 
     footer {

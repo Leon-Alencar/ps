@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras - Coma Aqui</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header class="cabecalho">
+    <div class="marca-conainer">
+        <h1 class="titulo-marca">Seu Carrinho</h1>
+    </div>
+    <nav class="menu-navegcao">
+        <a href="index.html">Voltar ao Cardápio</a>
+    </nav>
+   </header>
+
+   <main class="conteudo-p">
+    <h1 class="cardapios">Itens Selecionados</h1>
+    
+    <!-- Lista onde os itens do carrinho vão aparecer -->
+    <div id="lista-carrinho" class="caixa-carrinho">
+        <p>Seu carrinho está vazio.</p>
+    </div>
+
+    <!-- Área de totais e desconto -->
+    <div class="resumo-pedido">
+        <p>Subtotal: <span id="subtotal">R$ 0,00</span></p>
+        <p id="mensagem-desconto" class="texto-desconto"></p>
+        <p class="total-final">Total a Pagar: <span id="total-geral">R$ 0,00</span></p>
+        <button type="button" class="bob" onclick="finalizarCompra()">Finalizar Pedido</button>
+    </div>
+   </main>
+
+   <footer>
+    <section class="footer">
+        <a href="index.html">Continuar Comprando</a>
+    </section>
+   </footer>
+
+   <script src="carrinho.js"></script>
+</body>
+</html>

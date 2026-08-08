@@ -13,6 +13,7 @@ body {
     min-height: 100vh;
 }
 
+/* HEADER GRANDE E FIXO */
 header {
     background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSPBFCYcbCkP0-PQnt-SVGH1tiQPK9dUNCaKWMFkPrqA&s=10');
     background-size: cover;
@@ -29,43 +30,46 @@ header {
     transition: height 0.3s ease-in-out;
 }
 
-/* Estado reduzido do header ao rolar a página */
+/* REDUZ EXATAMENTE 75% AO ROLAR (De 350px para ~88px) */
 header.shrink {
-    height: 90px;
+    height: 88px;
 }
 
+/* LOGO E TÍTULO GRANDES E COM FUNDO VAZADO */
 .titulo-base {
     display: flex;
     align-items: center;
     gap: 20px;
     cursor: pointer;
+    background: transparent; /* Fundo totalmente vazado */
 }
 
 .logo-top {
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     object-fit: cover;
     transition: width 0.3s ease, height 0.3s ease;
 }
 
 header.shrink .logo-top {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
 }
 
 .titulo-top {
     color: #ffffff;
-    font-size: 2rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    font-size: 3rem; /* Título bem grande com fundo vazado */
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
     transition: font-size 0.3s ease;
+    background: transparent;
 }
 
 header.shrink .titulo-top {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
-/* MENU FIXO NO CANTO SUPERIOR DIREITO */
+/* MENU NO CANTO SUPERIOR DIREITO */
 .navegar {
     position: absolute;
     top: 20px;
@@ -77,9 +81,8 @@ header.shrink .titulo-top {
     transition: top 0.3s ease;
 }
 
-/* Ajusta a posição do menu se quiser que ele suba um pouco ao encolher */
 header.shrink .navegar {
-    top: 25px;
+    top: 20px; /* Mantém alinhado no topo mesmo quando encolher */
 }
 
 .navegar a {

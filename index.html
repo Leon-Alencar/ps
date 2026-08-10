@@ -1,71 +1,93 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coma Aqui</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Site de Jogos</title>
 </head>
 <body>
-   <header class="cabecalho">
-    <!--Lado esquerdo LOGO e NOME DA EMPRESA-->
-    <div class="marca-conainer">
-        <img src="https://img.magnific.com/vetores-gratis/vetor-de-design-de-gradiente-colorido-de-passaro_343694-2506.jpg?semt=ais_hybrid&w=740&q=80" alt="logo-passaro" id="logo-restaurante" class="imagem-logo">
-        <h1 id="titulo-restaurante" class="titulo-marca">Coma Aqui</h1>
+
+    <header class="painel" id="painel-ao">
+        <div class="lado-direito">
+            <a href="index.html">
+                <img src="imagem/logo.png" alt="logo" class="logo-foto" id="foto-al">
+            </a>
+            <h1 class="titulo" id="titulo-ad">
+                <a href="index.html">Day Game</a>
+            </h1>
+        </div>
+
+        <div class="nav-bar" id="nav-js">
+            <nav class="nav-toff" id="toff-nav">
+                <a href="index.html">Inicial</a>
+                <a href="javascript:void(0)" onclick="abrirCarrinho()" class="carrinho-cup" id="carrinho-bx">
+                    🛒 <span id="contador-carrinho">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-box">
+        <h2 class="texto-card-aventura">Aventura</h2>
+        
+        <section class="caixa" id="caixa-na">
+            <div class="box-caixa-b" id="text-box-caixa-1">
+                <img src="img/jogo1.png" alt="card AB" class="nova-bar">
+                <h3 class="nomenclatura">Carta Base</h3>
+                <p class="text-evnit">Jogo com quatro jogadores</p>
+                <span class="texto-sc">R$ 185,00</span>
+                <button onclick="adicionarAoCarrinho('Carta Base', 185.00)" class="button-copy" id="funchon-button-1">Comprar</button>
+            </div>
+            
+            <div class="box-caixa-b" id="text-box-caixa-2">
+                <img src="img/jogo2.png" alt="card CD" class="nova-bar">
+                <h3 class="nomenclatura">Expansão</h3>
+                <p class="text-evnit">Adiciona mais dois jogadores</p>
+                <span class="texto-sc">R$ 95,00</span>
+                <button onclick="adicionarAoCarrinho('Expansão', 95.00)" class="button-copy" id="funchon-button-2">Comprar</button>
+            </div>
+        </section>
+    </main>
+
+    <div class="carrinho-lateral" id="gaveta-carrinho">
+        <div class="cabecalho-gaveta">
+            <h3>Seu Carrinho</h3>
+            <button onclick="fecharCarrinho()" class="botao-fechar">X</button>
+        </div>
+        
+        <div class="corpo-carrinho" id="lista-itens-carrinho">
+            <p>Seu carrinho está vazio.</p>
+        </div>
+
+        <div class="rodape-gaveta">
+            <p>Desconto: <span id="valor-desconto">R$ 0,00</span></p>
+            <p><strong>Total: <span id="valor-total">R$ 0,00</span></strong></p>
+            <button class="botao-finalizar">Finalizar Compra</button>
+        </div>
     </div>
-    <!--2.Lado direito MENU DE NAVEGAÇÃO no canto superior-->
-    <nav class="menu-navegcao" id="menu-principal">
-        <a href="#inicio">Início</a>
-        <a href="#ajuda">Ajuda</a>
-        <!--Link para a página do carrinho / pop-up -->
-        <a href="carrinho.html" id="btn-ab" class="link-carrinho">🛒 
-            <span id="contador-carrinho" class="bad-carrinho">0</span>
-        </a>
-    </nav>
-   </header>
 
-   <!--Corpo do site-->
-   <main class="conteudo-p" id="incial">
-    <h1 class="cardapios" id="esc-comi">Cardápio</h1>
-    
-    <section class="box-card">
-        <img src="https://www.receiteria.com.br/wp-content/uploads/bruschetta-facil-730x480.jpg" alt="torrada com tomate" class="card">
-        <article>
-            <span class="nome-produto">Torrada italiana com molho de tomate</span>
-            <span class="preco-produto">R$ 150,00</span>
-        </article>
-        <button type="button" class="bob">Eu quero</button>
-    </section>
+    <footer class="rodape" id="footer-box">
+        <section id="barra-footer" class="img-footer">
+            <div class="direito-footer">
+                <a href="index.html">
+                    <img src="imagem/logo.png" alt="logo" class="logo-foto" id="foto-footer-id">
+                    <p class="texto-footer">Day Game</p>
+                </a>
+            </div>
 
-    <section class="box-card">
-        <img src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2022/08/05/40767670-cestinha-antepasto.jpg" alt="Cestinha-antepasto" class="card">
-        <article>
-            <span class="nome-produto">Cestinha de antepasto com berinjela</span>
-            <span class="preco-produto">R$ 135,00</span>
-        </article>
-        <button type="button" class="bob">Eu quero</button>
-    </section>
+            <div class="direito-footer">
+                <a href="politica.html">P. de Privacidade</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="form.html">Trabalhe aqui</a>
+            </div>
 
-    <section class="box-card">
-        <img src="https://i.pinimg.com/originals/2f/b2/3b/2fb23b4511247fe4813b6d25240244c0.jpg" alt="mini-sanduiche-verde" class="card">
-        <article>
-            <span class="nome-produto">Mini sanduíche verde com queijo coalho</span>
-            <span class="preco-produto">R$ 95,00</span>
-        </article>
-        <button type="button" class="bob">Eu quero</button>
-    </section>
-   </main>
+            <div class="esquerda-footer">
+                <a href="link.Insta"><img src="inst.png" alt="Instagram"></a>
+                <a href="link.WhatsApp"><img src="whats.png" alt="WhatsApp"></a>
+            </div>
+        </section>
+    </footer>
 
-   <!--Rodapé-->
-   <footer>
-    <img src="https://img.magnific.com/vetores-gratis/vetor-de-design-de-gradiente-colorido-de-passaro_343694-2506.jpg?semt=ais_hybrid&w=740&q=80" alt="logo-passaro" id="logo-restaurante" class="imagem-logo">
-    <section class="footer" id="rodpe">
-        <a href="#">Política de Privacidade</a>
-        <a href="#">Sobre nós</a>
-        <a href="#">Trabalhe aqui</a>
-        <a href="#ajuda">Ajuda</a>
-    </section>
-   </footer>
-   <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

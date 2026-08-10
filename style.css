@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #3a21c5;
 }
 
 /* --- 2. HEADER E EFEITO SANFONA --- */
@@ -47,7 +47,7 @@ body {
 }
 
 .box-caixa-b {
-    background-color: #ffffff;
+    background-color: #a6eae0;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     padding: 20px;

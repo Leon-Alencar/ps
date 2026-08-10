@@ -124,3 +124,9 @@ body {
     cursor: pointer;
     margin-top: 10px;
 }
+
+.nova-bar
+{
+    height: 100px;
+    width: 50px;
+}

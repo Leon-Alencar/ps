@@ -20,11 +20,12 @@ function fecharCarrinho() {
     gavetaCarrinho.classList.remove('ativa'); 
 }
 
-// 3. LÓGICA DE COMPRA E ATUALIZAÇÃO DE ITENS
+// 3. LÓGICA DE COMPRA E ATUALIZAÇÃO DE ITENS (COM DESCONTO DE 10% PARA MAIS DE 3 ITENS)
 let listaDeProdutos = [];
 const contadorVisual = document.getElementById('contador-carrinho');
 const containerItens = document.getElementById('lista-itens-carrinho');
 const spanTotal = document.getElementById('valor-total');
+const spanDesconto = document.getElementById('valor-desconto');
 
 function adicionarAoCarrinho(nomeProduto, precoProduto) {
     listaDeProdutos.push({ nome: nomeProduto, preco: precoProduto });
@@ -42,15 +43,16 @@ function atualizarCarrinhoVisual() {
     if (listaDeProdutos.length === 0) {
         containerItens.innerHTML = '<p>Seu carrinho está vazio.</p>';
         if (spanTotal) spanTotal.innerText = 'R$ 0,00';
+        if (spanDesconto) spanDesconto.innerText = 'R$ 0,00';
         return;
     }
     
     containerItens.innerHTML = '';
-    let precoTotal = 0;
+    let subtotal = 0;
     
     for (let i = 0; i < listaDeProdutos.length; i++) {
         let produtoAtual = listaDeProdutos[i];
-        precoTotal = precoTotal + produtoAtual.preco;
+        subtotal = subtotal + produtoAtual.preco;
         
         containerItens.innerHTML += `
             <div style="display: flex; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px dashed #eee; padding-bottom: 5px;">
@@ -60,8 +62,21 @@ function atualizarCarrinhoVisual() {
         `;
     }
     
+    let valorDesconto = 0;
+    let totalFinal = subtotal;
+
+    // Regra: Mais de 3 itens ganha 10% de desconto
+    if (listaDeProdutos.length > 3) {
+        valorDesconto = subtotal * 0.10;
+        totalFinal = subtotal - valorDesconto;
+    }
+
+    if (spanDesconto) {
+        spanDesconto.innerText = 'R$ ' + valorDesconto.toFixed(2);
+    }
+
     if (spanTotal) {
-        spanTotal.innerText = 'R$ ' + precoTotal.toFixed(2);
+        spanTotal.innerText = 'R$ ' + totalFinal.toFixed(2);
     }
 }
 
@@ -76,9 +91,9 @@ function finalizarCompra() {
     fecharCarrinho();
 }
 
-// 4. ENVIO DO FORMULÁRIO DE SUGESTÃO COM POPUP
+// 4. ENVIO DO FORMULÁRIO DE SUGESTÃO COM O NOVO TEXTO DE ALERTA
 function enviarSugestao(event) {
-    event.preventDefault(); // Evita recarregar a página antes do alerta
-    alert('Sugestão enviada com sucesso!');
+    event.preventDefault(); // Evita recarregar a página
+    alert('Sugestão enviado com sucesso, em breve entraremos em contato');
     document.querySelector('.formulario-sugestao').reset();
 }

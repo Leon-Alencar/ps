@@ -20,7 +20,7 @@ function fecharCarrinho() {
     gavetaCarrinho.classList.remove('ativa'); 
 }
 
-// 3. LÓGICA DE COMPRA E ATUALIZAÇÃO DE ITENS (COM DESCONTO DE 10% PARA MAIS DE 3 ITENS)
+// 3. LÓGICA DE COMPRA E ATUALIZAÇÃO DE ITENS (COM AVISO E DESCONTO DE 10%)
 let listaDeProdutos = [];
 const contadorVisual = document.getElementById('contador-carrinho');
 const containerItens = document.getElementById('lista-itens-carrinho');
@@ -65,10 +65,17 @@ function atualizarCarrinhoVisual() {
     let valorDesconto = 0;
     let totalFinal = subtotal;
 
-    // Regra: Mais de 3 itens ganha 10% de desconto
+    // Regra: Mais de 3 itens ganha 10% de desconto e avisa o cliente
     if (listaDeProdutos.length > 3) {
         valorDesconto = subtotal * 0.10;
         totalFinal = subtotal - valorDesconto;
+        
+        // Adiciona um aviso visível dentro da lista do carrinho
+        containerItens.innerHTML += `
+            <div style="margin-top: 15px; padding: 8px; background-color: #e8f8f5; border: 1px solid #27ae60; border-radius: 4px; color: #27ae60; font-size: 13px; font-weight: bold; text-align: center;">
+                🎉 Desconto de 10% aplicado por ter mais de 3 itens!
+            </div>
+        `;
     }
 
     if (spanDesconto) {
@@ -91,9 +98,9 @@ function finalizarCompra() {
     fecharCarrinho();
 }
 
-// 4. ENVIO DO FORMULÁRIO DE SUGESTÃO COM O NOVO TEXTO DE ALERTA
+// 4. ENVIO DO FORMULÁRIO DE SUGESTÃO
 function enviarSugestao(event) {
-    event.preventDefault(); // Evita recarregar a página
+    event.preventDefault(); 
     alert('Sugestão enviado com sucesso, em breve entraremos em contato');
     document.querySelector('.formulario-sugestao').reset();
 }

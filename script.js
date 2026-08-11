@@ -1,13 +1,7 @@
 // 1. EFEITO SANFONA DO HEADER
 const painelHeader = document.getElementById('painel-ao');
 
-window.addEventListener('scroll', function() {
-    if (window.scrollY > 50) {
-        painelHeader.style.height = '100px'; 
-    } else {
-        painelHeader.style.height = '100vh'; 
-    }
-});
+
 
 // 2. CONTROLE DA GAVETA LATERAL DO CARRINHO
 const gavetaCarrinho = document.getElementById('gaveta-carrinho');

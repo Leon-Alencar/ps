@@ -31,7 +31,7 @@ body {
     align-items: flex-start;
     padding: 30px;
     box-sizing: border-box;
-    z-index: 999;
+   
 }
 
 /* Espaçamento automático para o corpo não ficar escondido atrás do header cheio */

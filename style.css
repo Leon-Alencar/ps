@@ -1,22 +1,76 @@
-/* --- 1. CONFIGURAÇÃO GERAL DO CORPO --- */
+/* --- 1. CONFIGURAÇÃO GERAL E CORES (Azul Petróleo, Bege, Verde, Vermelho e Violeta) --- */
+:root {
+    --azul-petroleo: #0a3d62;
+    --bege: #f5f6fa;
+    --bege-claro: #dcdde1;
+    --verde: #27ae60;
+    --vermelho: #e74c3c;
+    --violeta: #8e44ad;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #3a21c5;
+    background-color: var(--azul-petroleo);
+    color: #333;
 }
 
-/* --- 2. HEADER E EFEITO SANFONA --- */
+/* --- 2. HEADER E EFEITO SANFONA FIXO NO TOPO --- */
 #painel-ao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100vh;
-    background-image: url('https://c4.wallpaperflare.com/wallpaper/225/935/673/games-posters-crossover-hd-wallpaper-preview.jpg');
+    background-image: linear-gradient(rgba(10, 61, 98, 0.7), rgba(10, 61, 98, 0.7)), url('https://c4.wallpaperflare.com/wallpaper/225/935/673/games-posters-crossover-hd-wallpaper-preview.jpg');
     background-size: cover;
     background-position: top center;
     transition: height 0.4s ease;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 30px;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    z-index: 999;
+}
+
+/* Espaçamento para o conteúdo não ficar escondido embaixo do header fixo */
+body {
+    padding-top: 100vh;
+}
+
+.lado-direito {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.titulo a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 28px;
+}
+
+.nav-toff {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-toff a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-toff a:hover {
+    color: var(--verde);
+}
+
+.nav-toff a:active {
+    color: var(--vermelho);
 }
 
 /* --- 3. CONTADOR DO CARRINHO --- */
@@ -28,7 +82,7 @@ body {
 }
 
 #contador-carrinho {
-    background-color: #e74c3c;
+    background-color: var(--vermelho);
     color: white;
     border-radius: 50%;
     padding: 2px 6px;
@@ -39,30 +93,48 @@ body {
 }
 
 /* --- 4. MAIN E OS CARDS --- */
-#caixa-na {
+.main-box {
+    background-color: var(--bege);
+    padding: 40px;
+    min-height: 80vh;
+}
+
+#caixa-na, .caixa {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    padding: 40px;
+    justify-content: center;
 }
 
 .box-caixa-b {
-    background-color: #a6eae0;
+    background-color: #ffffff;
+    border: 2px solid var(--bege-claro);
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     padding: 20px;
     width: 240px;
     text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.box-caixa-b:hover {
+    transform: translateY(-5px);
+    border-color: var(--violeta);
 }
 
 .button-copy {
-    background-color: #27ae60;
+    background-color: var(--verde);
     color: white;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button-copy:hover {
+    background-color: #219653;
 }
 
 /* --- 5. GAVETA LATERAL DO CARRINHO (OFFCANVAS) --- */
@@ -100,6 +172,7 @@ body {
     font-size: 18px;
     cursor: pointer;
     font-weight: bold;
+    color: var(--vermelho);
 }
 
 .corpo-carrinho {
@@ -115,7 +188,7 @@ body {
 
 .botao-finalizar {
     width: 100%;
-    background-color: #2980b9;
+    background-color: var(--azul-petroleo);
     color: white;
     border: none;
     padding: 12px;
@@ -125,8 +198,60 @@ body {
     margin-top: 10px;
 }
 
-.nova-bar
-{
-    height: 350px;
+.nova-bar {
+    height: 200px;
     width: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Formulários e Simuladores */
+.formulario-estilo, .form-simulador {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid var(--bege-claro);
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.formulario-estilo input, .formulario-estilo select, .formulario-estilo textarea,
+.form-simulador input, .form-simulador select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #072a42;
+    color: white;
+    padding: 20px 40px;
+}
+
+.img-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.direito-footer a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.esquerda-footer img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+.logo-foto {
+    width: 45px;
+    height: 45px;
 }

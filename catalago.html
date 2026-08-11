@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Store - Catálogo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="painel" id="painel-ao">
+        <div class="lado-direito">
+            <a href="index.html">
+                <img src="https://img.icons8.com/?size=100&id=KY71leRG66mL&format=png&color=000000" alt="logo" class="logo-foto" id="foto-al">
+            </a>
+            <h1 class="titulo" id="titulo-ad">
+                <a href="index.html">Pixel Store</a>
+            </h1>
+        </div>
+
+        <div class="nav-bar" id="nav-js">
+            <nav class="nav-toff" id="toff-nav">
+                <a href="index.html">Início</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="atendimento.html">Atendimento</a>
+                <a href="sugestao.html">Sugestões</a>
+                <a href="javascript:void(0)" onclick="abrirCarrinho()" class="carrinho-cup" id="carrinho-bx">
+                    🛒 <span id="contador-carrinho">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-box">
+        <h2 class="texto-card-aventura">Catálogo de Produtos</h2>
+        
+        <section class="caixa">
+            <div class="box-caixa-b">
+                <img src="https://m.media-amazon.com/images/I/61UEnniavYL._AC_UF1000,1000_QL80_.jpg" alt="Mouse" class="nova-bar">
+                <h3 class="nomenclatura">Mouse Gamer</h3>
+                <p class="text-evnit">Mouse Gamer de alta precisão</p>
+                <span class="texto-sc">R$ 120,00</span>
+                <button onclick="adicionarAoCarrinho('Mouse Gamer', 120.00)" class="button-copy">Comprar</button>
+            </div>
+            
+            <div class="box-caixa-b">
+                <img src="https://drogal.vtexassets.com/arquivos/ids/214669/81402.jpg?v=638487959959000000" alt="Teclado" class="nova-bar">
+                <h3 class="nomenclatura">Teclado Mecânico</h3>
+                <p class="text-evnit">Teclado mecânico RGB</p>
+                <span class="texto-sc">R$ 180,00</span>
+                <button onclick="adicionarAoCarrinho('Teclado Mecânico', 180.00)" class="button-copy">Comprar</button>
+            </div>
+
+            <div class="box-caixa-b">
+                <img src="https://cdn.folhape.com.br/upload/dn_arquivo/2022/12/super-mario-bros-the-movie-divulgacao-universal-pictures.jpg" alt="Headset" class="nova-bar">
+                <h3 class="nomenclatura">Headset</h3>
+                <p class="text-evnit">Headset com som surround</p>
+                <span class="texto-sc">R$ 150,00</span>
+                <button onclick="adicionarAoCarrinho('Headset', 150.00)" class="button-copy">Comprar</button>
+            </div>
+            
+            <div class="box-caixa-b">
+                <img src="https://upload.wikimedia.org/wikipedia/pt/5/53/God_of_War_2005_capa.png" alt="Controle" class="nova-bar">
+                <h3 class="nomenclatura">Controle</h3>
+                <p class="text-evnit">Controle compatível com PC e consoles</p>
+                <span class="texto-sc">R$ 220,00</span>
+                <button onclick="adicionarAoCarrinho('Controle', 220.00)" class="button-copy">Comprar</button>
+            </div>
+        </section>
+
+        <section class="simulador-compra">
+            <h2>Simular Compra</h2>
+            <div class="form-simulador">
+                <label for="select-produto">Escolha o produto:</label>
+                <select id="select-produto">
+                    <option value="120">Mouse Gamer - R$ 120,00</option>
+                    <option value="180">Teclado Mecânico - R$ 180,00</option>
+                    <option value="150">Headset - R$ 150,00</option>
+                    <option value="220">Controle - R$ 220,00</option>
+                </select>
+
+                <label for="input-quantidade">Quantidade:</label>
+                <input type="number" id="input-quantidade" min="1" value="1">
+
+                <button onclick="calcularCompra()" class="button-copy">Calcular total</button>
+                
+                <p id="resultado-simulacao"></p>
+                <p id="resultado-frete"></p>
+            </div>
+        </section>
+    </main>
+
+    <div class="carrinho-lateral" id="gaveta-carrinho">
+        <div class="cabecalho-gaveta">
+            <h3>Seu Carrinho</h3>
+            <button onclick="fecharCarrinho()" class="botao-fechar">X</button>
+        </div>
+        
+        <div class="corpo-carrinho" id="lista-itens-carrinho">
+            <p>Seu carrinho está vazio.</p>
+        </div>
+
+        <div class="rodape-gaveta">
+            <p>Desconto: <span id="valor-desconto">R$ 0,00</span></p>
+            <p><strong>Total: <span id="valor-total">R$ 0,00</span></strong></p>
+            <button class="botao-finalizar">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <footer class="rodape" id="footer-box">
+        <section id="barra-footer" class="img-footer">
+            <div class="direito-footer">
+                <a href="index.html">
+                    <img src="https://img.icons8.com/?size=100&id=KY71leRG66mL&format=png&color=000000" alt="logo" class="logo-foto" id="foto-footer-id">
+                    <p class="texto-footer">Pixel Store</p>
+                </a>
+            </div>
+
+            <div class="direito-footer">
+                <a href="https://transparencia.senac.br/#/">P. de Privacidade</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="https://mg.senac.br/web/guest/rede-de-carreiras1">Trabalhe aqui</a>
+            </div>
+
+            <div class="esquerda-footer">
+                <a href="https://www.instagram.com/senacminas/"><img src="https://img.icons8.com/?size=100&id=53889&format=png&color=000000" alt="Instagram"></a>
+                <a href="https://wa.me/5534984465569?text=Ol%C3%A1%2C%20gostei%20do%20seu%20site%2C%20vamos%20conversar%3F"><img src="https://img.icons8.com/?size=100&id=43317&format=png&color=000000" alt="WhatsApp"></a>
+            </div>
+        </section>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

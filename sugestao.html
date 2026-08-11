@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixel Store - Sugestões</title>
+    <title>Day Game - Sugestão de Melhoria</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,17 +14,15 @@
                 <img src="https://img.icons8.com/?size=100&id=KY71leRG66mL&format=png&color=000000" alt="logo" class="logo-foto" id="foto-al">
             </a>
             <h1 class="titulo" id="titulo-ad">
-                <a href="index.html">Pixel Store</a>
+                <a href="index.html">Day Game</a>
             </h1>
         </div>
 
         <div class="nav-bar" id="nav-js">
             <nav class="nav-toff" id="toff-nav">
-                <a href="index.html">Início</a>
-                <a href="catalogo.html">Catálogo</a>
-                <a href="sobre.html">Sobre Nós</a>
-                <a href="atendimento.html">Atendimento</a>
-                <a href="sugestao.html">Sugestões</a>
+                <a href="index.html">Inicial</a>
+                <a href="sobre.html">Sobre os Jogos</a>
+                <a href="sugestao.html">Sugestão</a>
                 <a href="javascript:void(0)" onclick="abrirCarrinho()" class="carrinho-cup" id="carrinho-bx">
                     🛒 <span id="contador-carrinho">0</span>
                 </a>
@@ -33,23 +31,25 @@
     </header>
 
     <main class="main-box">
-        <section class="secao-atendimento">
-            <h2>Envie sua Sugestão</h2>
-            <fieldset class="formulario-estilo">
-                <legend>Deixe sua opinião</legend>
-                
-                <label for="sugestao-email">E-mail:</label>
-                <input type="email" id="sugestao-email" placeholder="seu@email.com">
+        <h2 class="texto-card-aventura">Sugestão de Melhoria</h2>
+        
+        <div style="display: flex; justify-content: center; padding: 20px;">
+            <form class="formulario-sugestao" onsubmit="enviarSugestao(event)">
+                <label for="email-sugestao">E-mail:</label>
+                <input type="email" id="email-sugestao" placeholder="seuemail@email.com" required>
 
-                <label for="sugestao-contato">Contato:</label>
-                <input type="text" id="sugestao-contato" placeholder="(00) 00000-0000">
+                <label for="contato-sugestao">Contato (Telefone):</label>
+                <input type="text" id="contato-sugestao" placeholder="(34) 99999-9999" required>
 
-                <label for="sugestao-idade">Idade:</label>
-                <input type="number" id="sugestao-idade" placeholder="Sua idade">
+                <label for="idade-sugestao">Idade:</label>
+                <input type="number" id="idade-sugestao" placeholder="Sua idade" required>
 
-                <button onclick="enviarSugestao()" class="button-copy">Enviar</button>
-            </fieldset>
-        </section>
+                <label for="mensagem-sugestao">Sugestão:</label>
+                <textarea id="mensagem-sugestao" rows="4" placeholder="Escreva sua sugestão..." required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+
+                <button type="submit" class="button-copy" style="margin-top: 10px;">Enviar Sugestão</button>
+            </form>
+        </div>
     </main>
 
     <div class="carrinho-lateral" id="gaveta-carrinho">
@@ -65,7 +65,7 @@
         <div class="rodape-gaveta">
             <p>Desconto: <span id="valor-desconto">R$ 0,00</span></p>
             <p><strong>Total: <span id="valor-total">R$ 0,00</span></strong></p>
-            <button class="botao-finalizar">Finalizar Compra</button>
+            <button class="botao-finalizar" onclick="finalizarCompra()">Finalizar Compra</button>
         </div>
     </div>
 
@@ -74,13 +74,13 @@
             <div class="direito-footer">
                 <a href="index.html">
                     <img src="https://img.icons8.com/?size=100&id=KY71leRG66mL&format=png&color=000000" alt="logo" class="logo-foto" id="foto-footer-id">
-                    <p class="texto-footer">Pixel Store</p>
+                    <p class="texto-footer">Day Game</p>
                 </a>
             </div>
 
             <div class="direito-footer">
                 <a href="https://transparencia.senac.br/#/">P. de Privacidade</a>
-                <a href="sobre.html">Sobre Nós</a>
+                <a href="sobre.html">Sobre os Jogos</a>
                 <a href="https://mg.senac.br/web/guest/rede-de-carreiras1">Trabalhe aqui</a>
             </div>
 

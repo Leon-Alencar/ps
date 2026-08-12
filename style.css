@@ -37,6 +37,7 @@ body {
 /* Espaçamento automático para o corpo não ficar escondido atrás do header cheio */
 body {
     padding-top: 100vh;
+    cursor: url(https://img.icons8.com/?size=100&id=38BpZMPBs41P&format=png&color=000000)0 0, auto;
 }
 
 .lado-direito {
@@ -256,9 +257,4 @@ body {
 .logo-foto {
     width: 45px;
     height: 45px;
-}
-
-body
-{
-    cursor: url(https://img.icons8.com/?size=100&id=38BpZMPBs41P&format=png&color=000000)0 0, auto;
 }
